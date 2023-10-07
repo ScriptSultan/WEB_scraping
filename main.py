@@ -45,5 +45,5 @@ for hrefs in html_tag_find:
         name_pattern = r"(\W+)"
         name = re.sub(name_pattern,  ' ', name_company_1)
         data['name'] = name
-        with open('data_vacancy.json', 'w', encoding='utf-8') as f:
+        with open('data_vacancy.json', 'a', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
